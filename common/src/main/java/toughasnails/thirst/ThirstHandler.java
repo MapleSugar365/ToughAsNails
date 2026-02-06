@@ -109,6 +109,10 @@ public class ThirstHandler
         ITemperature temperature = TemperatureHelper.getTemperatureData(event.getPlayer());
         temperature.setLastLevel(TemperatureData.DEFAULT_LEVEL);
         temperature.setLastHyperthermiaTicks(0);
+
+        if (event.getPlayer() instanceof ServerPlayer serverPlayer) {
+            syncThirst(serverPlayer);
+        }
     }
 
     public static void syncThirst(ServerPlayer player)

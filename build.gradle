@@ -21,7 +21,8 @@ changelog {
 }
 
 ext {
-    mod_version = gradleutils.getTagOffsetVersion()
+    // mod_version = gradleutils.getTagOffsetVersion()
+    mod_version = "10.1.0.13-hmmcm-hotfix"
     changelog_file = rootProject.file("build/changelog.txt")
     trimChangelog = (String text) -> {
         def m = text =~ /(?s) - (?:[0-9.]+) (.+?)(?=( - )|$)/
